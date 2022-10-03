@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music</title>
+    <link rel="shortcut icon" href="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX33029398.jpg"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./build/tailwind.css">
+
+</head>
+
+<body>
+    <div class="bg-[#d5d5d5] px-4 py-52 ">
+        <div class="max-w-7xl mx-auto relative">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  mx-auto gap-5">
+                <!-- Side bar -->
+                <div class="hidden md:block">
+                    <div class="max-w-full flex pt-10">
+                        <i class="fa-solid fa-chart-simple mt-[6px]"></i>
+                        <h2 class="text-[#2b2b37] font-semibold ml-2 text-lg">My Music</h2>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 text-xs mt-5 mb-3 block">Recomend</span>
+                        <div class="flex p-2 bg-[#f5f5f5] rounded-2xl">
+                            <i class="text-[#b29dd7] fa-sharp fa-solid fa-compact-disc p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">For you</h3>
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-solid fa-headphones p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Library</h3>
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-solid fa-tower-broadcast p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Radio Station</h3">
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-regular fa-circle-play p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Music Video</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 text-xs mt-5 mb-3 block">My music</span>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-regular fa-heart p-[2px]"></i>
+
+                            <h3 class="ml-2 font-semibold text-sm">Liked Song</h3>
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-solid fa-music p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Albums</h3>
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-regular fa-star p-[2px]"></i>
+
+                            <h3 class="ml-2 font-semibold text-sm">Artists</h3">
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-solid fa-clock p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Recent</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 text-xs mt-5 mb-3 block">Playlists</span>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-regular fa-star p-[2px]"></i>
+                            <i class="fa-solid fa-mandolin"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Pop</h3>
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-regular fa-star p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Rap</h3>
+                        </div>
+                        <div class="flex p-2">
+                            <i class="text-[#b29dd7] fa-regular fa-star p-[2px]"></i>
+                            <h3 class="ml-2 font-semibold text-sm">Lofi</h3">
+                        </div>
+                    </div>
+                    <div class="flex bg-[#b29dd7] rounded-2xl p-2 items-center">
+                        <i class="fa-solid fa-list mx-3"></i>
+                        <p class="text-sm font-semibold ml-1">New Playlist</p>
+                    </div>
+                </div>
+                <!-- Main playlist -->
+                <div class="md:col-span-2 lg:col-span-3 bg-[#f5f5f5] rounded-2xl">
+                    <div class="grid grid-cols-3">
+                        <div class="p-6">
+                            <div class="flex relative">
+                                <i class="fa-solid fa-magnifying-glass absolute top-3 left-3 text-[#b29dd7]"></i>
+                                <input type="text" placeholder="Search"
+                                    class="border outline-none focus:border-[#b29dd7] px-8 py-2 rounded-xl text-sm">
+                                <h2></h2>
+                            </div>
+                            <div class="w-[200px] h-[200px] lg:w-[234px] lg:h-[234px]">
+                                <h2 class="pt-4 mb-5 font-semibold">Releases for You</h2>
+                                <img src="
+                                https://source.unsplash.com/random
+                                " alt="" class="w-full h-full object-cover rounded-full">
+                            </div>
+                        </div>
+                        <div class="col-span-2 p-6">
+                            <div class="flex justify-end items-center">
+                                <div class="w-7 h-7">
+                                    <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-full">
+                                </div>
+                                <p class="ml-2 text-sm font-semibold">Hello, Tuan Anh</p>
+                            </div>
+                            <div class="flex pl-12 items-center">
+                                <i class="text-[#b29dd7] fa-regular fa-circle-pause p-[6px]"></i>
+                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
+                                <div class="p-2 mr-12">
+                                    <h3 class="text-sm font-semibold">
+                                        Sleep 4Ever
+                                    </h3>
+                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
+                                </div>
+                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
+                                <p class="text-sm text-gray-400 p-2">2:52</p>
+                            </div>
+                            <div class="flex pl-12 items-center">
+                                <p class="text-sm text-[#b29dd7] p-[10px]">2</p>
+                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
+                                <div class="p-2 mr-12">
+                                    <h3 class="text-sm font-semibold">
+                                        Sleep 4Ever
+                                    </h3>
+                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
+                                </div>
+                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
+                                <p class="text-sm text-gray-400 p-2">2:52</p>
+                            </div>
+                            <div class="flex pl-12 items-center">
+                                <p class="text-sm text-[#b29dd7] p-[10px]">3</p>
+                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
+                                <div class="p-2 mr-12">
+                                    <h3 class="text-sm font-semibold">
+                                        Sleep 4Ever
+                                    </h3>
+                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
+                                </div>
+                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
+                                <p class="text-sm text-gray-400 p-2">2:52</p>
+                            </div>
+                            <div class="flex pl-12 items-center">
+                                <p class="text-sm text-[#b29dd7] p-[10px]">4</p>
+                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
+                                <div class="p-2 mr-12">
+                                    <h3 class="text-sm font-semibold">
+                                        Sleep 4Ever
+                                    </h3>
+                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
+                                </div>
+                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
+                                <p class="text-sm text-gray-400 p-2">2:52</p>
+                            </div>
+                            <div class="flex pl-12 items-center">
+                                <p class="text-sm text-[#b29dd7] p-[10px]">5</p>
+                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
+                                <div class="p-2 mr-12">
+                                    <h3 class="text-sm font-semibold">
+                                        Sleep 4Ever
+                                    </h3>
+                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
+                                </div>
+                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
+                                <p class="text-sm text-gray-400 p-2">2:52</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- List song -->
+                    <div class="p-6 mb-3">
+                        <div class="text-sm font-semibold mb-2">
+                            Recently Played
+                        </div>
+                        <div class="grid grid-cols-5 gap-4">
+                            <div>
+                                <div class="h-24">
+                                    <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-lg ">
+                                </div>
+                                <h3 class="text-sm font-semibold mt-2">
+                                    Come Over When You're Sober, Pt.1
+                                </h3>
+                                <span class="text-sm text-gray-400">Lil Peep</span>
+                            </div>
+                            <div>
+                                <div class="h-24">
+                                    <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-lg ">
+                                </div>
+                                <h3 class="text-sm font-semibold mt-2">
+                                    Come Over When You're Sober, Pt.1
+                                </h3>
+                                <span class="text-sm text-gray-400">Lil Peep</span>
+                            </div>
+                            <div>
+                                <div class="h-24">
+                                    <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-lg ">
+                                </div>
+                                <h3 class="text-sm font-semibold mt-2">
+                                    Come Over When You're Sober, Pt.1
+                                </h3>
+                                <span class="text-sm text-gray-400">Lil Peep</span>
+                            </div>
+                            <div>
+                                <div class="h-24">
+                                    <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-lg ">
+                                </div>
+                                <h3 class="text-sm font-semibold mt-2">
+                                    Come Over When You're Sober, Pt.1
+                                </h3>
+                                <span class="text-sm text-gray-400">Lil Peep</span>
+                            </div>
+                            <div>
+                                <div class="h-24">
+                                    <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-lg ">
+                                </div>
+                                <h3 class="text-sm font-semibold mt-2">
+                                    Come Over When You're Sober, Pt.1
+                                </h3>
+                                <span class="text-sm text-gray-400">Lil Peep</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Friends and Activities -->
+                <div class="hidden lg:block">
+                    <h3 class="text-base font-semibold pt-10 mb-2">
+                        Friends Activity
+                    </h3>
+                    <div class="flex bg-[#f5f5f5] p-2 rounded-xl items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                G-Dragon
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Listening 3h ago
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                G-Dragon
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Listening 3h ago
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                G-Dragon
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Listening 3h ago
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                G-Dragon
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Listening 3h ago
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                G-Dragon
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Listening 3h ago
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <h3 class="text-base font-semibold pt-10 mb-2">
+                        Your Activity
+                    </h3>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                Oliver Tree
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Artists
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                Oliver Tree
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Artists
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="https://source.unsplash.com/random
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                Oliver Tree
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Artists
+                            </span>
+                        </div>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Play music -->
+            <div>
+                <div class="bg-[#b29dd7] w-full h-1 mt-5">
+                </div>
+                <div class="h-16 bg-[#f5f5f5] rounded-b-xl flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 mr-3 ml-5">
+                            <img src="
+                                    https://source.unsplash.com/random
+                                    " alt="" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div>
+
+                            <h3 class="text-xs md:text-sm font-semibold">Sleep 4Ever</h3>
+                            <p class="text-xs md:text-sm text-gray-400">Maggie andrew</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <i class="text-gray-400 text-lg p-3 fa-solid fa-shuffle"></i>
+                        <i class="text-gray-400 text-lg p-3 fa-solid fa-backward-step"></i>
+                        <i class="text-gray-400 text-lg p-3 fa-regular fa-circle-pause"></i>
+                        <i class="text-gray-400 text-lg p-3 fa-solid fa-forward-step"></i>
+                        <i class="text-gray-400 text-lg p-3 fa-solid fa-repeat"></i>
+                    </div>
+                    <div class="flex items-center mr-5 ">
+                        <i class="text-gray-400 text-lg p-3 fa-solid fa-volume-high"></i>
+                        <div class="bg-[#b29dd7] h-1 w-14">
+                        </div>
+                        <i class="text-[#b29dd7] fa-regular fa-heart p-4"></i>
+                        <i class="text-[#b29dd7] fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
