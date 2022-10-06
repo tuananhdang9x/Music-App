@@ -358,12 +358,11 @@ renderShuffle();
 // Ended handle
 songItem.addEventListener('ended', handleEnd);
 function handleEnd() {
-
     if (checkShuffle) {
         let newSongIndex;
         do {
             newSongIndex = Math.floor(Math.random() * 10);
-            console.log(newSongIndex, songIndex);
+
         } while (newSongIndex === songIndex);
         songIndex = newSongIndex;
         mainDisk.innerHTML = `<img src="
@@ -468,7 +467,7 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
-        infinite: true,
+        infinite: false,
         draggable: false,
         dots: false,
         prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
@@ -525,6 +524,8 @@ const listAllSong = document.querySelector('.list-all-song');
 songPackage.forEach(function (value, index) {
     value.addEventListener('click', () => {
         songIndex = Number(value.getAttribute('index'));
+        console.log(songIndex);
+
         mainDisk.innerHTML = `<img src="
         ${songs[songIndex].img}
         " alt="" class="w-full h-full object-cover rounded-full">`
@@ -626,6 +627,7 @@ playlistItem.forEach(function (value, index) {
         `
         currentSong = songItem.setAttribute('src', `${songs[songIndex].file}`);
         isPlaying = true;
+        console.log(songIndex);
         playPause();
     })
 })
