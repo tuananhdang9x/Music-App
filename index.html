@@ -16,18 +16,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./build/tailwind.css">
-
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <div class="bg-[#d5d5d5] px-4 py-52 ">
-        <div class="max-w-7xl mx-auto relative">
+    <div class="bg-[#d5d5d5] back-ground px-4 py-28 h-[1000px]">
+        <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  mx-auto gap-5">
                 <!-- Side bar -->
-                <div class="hidden md:block">
+                <div class="hidden lg:block">
                     <div class="max-w-full flex pt-10">
-                        <i class="fa-solid fa-chart-simple mt-[6px]"></i>
+                        <i class="fa-solid fa-chart-simple mt-[5px]"></i>
                         <h2 class="text-[#2b2b37] font-semibold ml-2 text-lg">My Music</h2>
                     </div>
                     <div>
@@ -92,157 +93,48 @@
                     </div>
                 </div>
                 <!-- Main playlist -->
-                <div class="md:col-span-2 lg:col-span-3 bg-[#f5f5f5] rounded-2xl">
-                    <div class="grid grid-cols-3">
-                        <div class="p-6">
-                            <div class="flex relative">
-                                <i class="fa-solid fa-magnifying-glass absolute top-3 left-3 text-[#b29dd7]"></i>
-                                <input type="text" placeholder="Search"
-                                    class="border outline-none focus:border-[#b29dd7] px-8 py-2 rounded-xl text-sm">
-                                <h2></h2>
-                            </div>
-                            <div class="w-[200px] h-[200px] lg:w-[234px] lg:h-[234px]">
-                                <h2 class="pt-4 mb-5 font-semibold">Releases for You</h2>
-                                <img src="
-                                https://source.unsplash.com/random
-                                " alt="" class="w-full h-full object-cover rounded-full">
+                <div class="md:col-span-3 lg:col-span-3 bg-[#f5f5f5] rounded-2xl">
+                    <div class="grid grid-cols-3 ">
+                        <div class="hidden md:block">
+                            <div class="p-6 relative">
+                                <div class="flex relative">
+                                    <i class="fa-solid fa-magnifying-glass absolute top-3 left-3 text-[#b29dd7]"></i>
+                                    <input type="text" placeholder="Search"
+                                        class="border outline-none focus:border-[#b29dd7] px-8 py-2 rounded-xl text-sm">
+                                    <h2></h2>
+                                </div>
+                                <h2 class="pt-4 mb-5 text-base font-semibold">Releases for You</h2>
+                                <div class="hidden md:block">
+                                    <div class="w-[200px] h-[200px] main-disk">
+                                        <!-- Img main disk -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-span-2 p-6">
-                            <div class="flex justify-end items-center">
+                        <div class="col-span-3 md:col-span-2 ">
+                            <div class="col-span-2 avatar-item">
                                 <div class="w-7 h-7">
                                     <img src="
-                                    https://source.unsplash.com/random
+                                    ./assets/avatar/me.jpg
                                     " alt="" class="w-full h-full object-cover rounded-full">
                                 </div>
                                 <p class="ml-2 text-sm font-semibold">Hello, Tuan Anh</p>
                             </div>
-                            <div class="flex pl-12 items-center">
-                                <i class="text-[#b29dd7] fa-regular fa-circle-pause p-[6px]"></i>
-                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
-                                <div class="p-2 mr-12">
-                                    <h3 class="text-sm font-semibold">
-                                        Sleep 4Ever
-                                    </h3>
-                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
+                            <div class="col-span-2 p-6 h-[400px] list-overflow relative scroll-custom">
+                                <div class="list-all-song">
+                                    <!-- Render list all song -->
                                 </div>
-                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
-                                <p class="text-sm text-gray-400 p-2">2:52</p>
                             </div>
-                            <div class="flex pl-12 items-center">
-                                <p class="text-sm text-[#b29dd7] p-[10px]">2</p>
-                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
-                                <div class="p-2 mr-12">
-                                    <h3 class="text-sm font-semibold">
-                                        Sleep 4Ever
-                                    </h3>
-                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
-                                </div>
-                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
-                                <p class="text-sm text-gray-400 p-2">2:52</p>
-                            </div>
-                            <div class="flex pl-12 items-center">
-                                <p class="text-sm text-[#b29dd7] p-[10px]">3</p>
-                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
-                                <div class="p-2 mr-12">
-                                    <h3 class="text-sm font-semibold">
-                                        Sleep 4Ever
-                                    </h3>
-                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
-                                </div>
-                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
-                                <p class="text-sm text-gray-400 p-2">2:52</p>
-                            </div>
-                            <div class="flex pl-12 items-center">
-                                <p class="text-sm text-[#b29dd7] p-[10px]">4</p>
-                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
-                                <div class="p-2 mr-12">
-                                    <h3 class="text-sm font-semibold">
-                                        Sleep 4Ever
-                                    </h3>
-                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
-                                </div>
-                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
-                                <p class="text-sm text-gray-400 p-2">2:52</p>
-                            </div>
-                            <div class="flex pl-12 items-center">
-                                <p class="text-sm text-[#b29dd7] p-[10px]">5</p>
-                                <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
-                                <div class="p-2 mr-12">
-                                    <h3 class="text-sm font-semibold">
-                                        Sleep 4Ever
-                                    </h3>
-                                    <span class="text-gray-400 text-sm">Maggie andrew</span>
-                                </div>
-                                <i class="text-[#b29dd7] fa-solid fa-ellipsis p-2"></i>
-                                <p class="text-sm text-gray-400 p-2">2:52</p>
-                            </div>
-
                         </div>
                     </div>
                     <!-- List song -->
                     <div class="p-6 mb-3">
-                        <div class="text-sm font-semibold mb-2">
+                        <audio class="song-item"></audio>
+                        <div class="text-base font-semibold mb-2">
                             Recently Played
                         </div>
-                        <div class="grid grid-cols-5 gap-4">
-                            <div>
-                                <div class="h-24">
-                                    <img src="
-                                    https://source.unsplash.com/random
-                                    " alt="" class="w-full h-full object-cover rounded-lg ">
-                                </div>
-                                <h3 class="text-sm font-semibold mt-2">
-                                    Come Over When You're Sober, Pt.1
-                                </h3>
-                                <span class="text-sm text-gray-400">Lil Peep</span>
-                            </div>
-                            <div>
-                                <div class="h-24">
-                                    <img src="
-                                    https://source.unsplash.com/random
-                                    " alt="" class="w-full h-full object-cover rounded-lg ">
-                                </div>
-                                <h3 class="text-sm font-semibold mt-2">
-                                    Come Over When You're Sober, Pt.1
-                                </h3>
-                                <span class="text-sm text-gray-400">Lil Peep</span>
-                            </div>
-                            <div>
-                                <div class="h-24">
-                                    <img src="
-                                    https://source.unsplash.com/random
-                                    " alt="" class="w-full h-full object-cover rounded-lg ">
-                                </div>
-                                <h3 class="text-sm font-semibold mt-2">
-                                    Come Over When You're Sober, Pt.1
-                                </h3>
-                                <span class="text-sm text-gray-400">Lil Peep</span>
-                            </div>
-                            <div>
-                                <div class="h-24">
-                                    <img src="
-                                    https://source.unsplash.com/random
-                                    " alt="" class="w-full h-full object-cover rounded-lg ">
-                                </div>
-                                <h3 class="text-sm font-semibold mt-2">
-                                    Come Over When You're Sober, Pt.1
-                                </h3>
-                                <span class="text-sm text-gray-400">Lil Peep</span>
-                            </div>
-                            <div>
-                                <div class="h-24">
-                                    <img src="
-                                    https://source.unsplash.com/random
-                                    " alt="" class="w-full h-full object-cover rounded-lg ">
-                                </div>
-                                <h3 class="text-sm font-semibold mt-2">
-                                    Come Over When You're Sober, Pt.1
-                                </h3>
-                                <span class="text-sm text-gray-400">Lil Peep</span>
-                            </div>
-
-
+                        <div class="img-slider flex list-song">
+                            <!-- Render List song -->
                         </div>
                     </div>
                 </div>
@@ -253,22 +145,23 @@
                     </h3>
                     <div class="flex bg-[#f5f5f5] p-2 rounded-xl items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/Billie Eilish.webp
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
                             <p class="text-sm font-semibold">
-                                G-Dragon
+                                Billie Eilish
                             </p>
-                            <span class="text-sm text-gray-400">
-                                Listening 3h ago
+                            <span class="text-sm text-gray-400 flex items-center">
+                                <div class="online"></div>
+                                Online now
                             </span>
                         </div>
                         <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
                     </div>
                     <div class="flex p-2 items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/gdragon.jpg
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
@@ -276,52 +169,52 @@
                                 G-Dragon
                             </p>
                             <span class="text-sm text-gray-400">
-                                Listening 3h ago
+                                Listening 1h ago
                             </span>
                         </div>
                         <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
                     </div>
                     <div class="flex p-2 items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/ronaldo.webp
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
                             <p class="text-sm font-semibold">
-                                G-Dragon
+                                Cristiano Ronaldo
                             </p>
                             <span class="text-sm text-gray-400">
-                                Listening 3h ago
+                                Listening 2h ago
+                            </span>
+                        </div>
+                        <i class="text-[#a489d3] fa-solid fa-ellipsis ml-4"></i>
+                    </div>
+                    <div class="flex p-2 items-center">
+                        <div class="w-6 h-6">
+                            <img src="./assets/avatar/justinBieber.jpeg
+                            " alt="" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-2 flex-1">
+                            <p class="text-sm font-semibold">
+                                Justin Bieber
+                            </p>
+                            <span class="text-sm text-gray-400">
+                                Listening 4h ago
                             </span>
                         </div>
                         <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
                     </div>
                     <div class="flex p-2 items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/cillianMurphy.webp
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
                             <p class="text-sm font-semibold">
-                                G-Dragon
+                                Cillian Murphy
                             </p>
                             <span class="text-sm text-gray-400">
-                                Listening 3h ago
-                            </span>
-                        </div>
-                        <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
-                    </div>
-                    <div class="flex p-2 items-center">
-                        <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
-                            " alt="" class="w-full h-full object-cover rounded-full">
-                        </div>
-                        <div class="ml-2 flex-1">
-                            <p class="text-sm font-semibold">
-                                G-Dragon
-                            </p>
-                            <span class="text-sm text-gray-400">
-                                Listening 3h ago
+                                Listening 1d ago
                             </span>
                         </div>
                         <i class="text-[#b29dd7] fa-solid fa-ellipsis ml-4"></i>
@@ -331,12 +224,12 @@
                     </h3>
                     <div class="flex p-2 items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/haanhtuan.webp
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
                             <p class="text-sm font-semibold">
-                                Oliver Tree
+                                Hà Anh Tuấn
                             </p>
                             <span class="text-sm text-gray-400">
                                 Artists
@@ -346,12 +239,12 @@
                     </div>
                     <div class="flex p-2 items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/denvau.webp
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
                             <p class="text-sm font-semibold">
-                                Oliver Tree
+                                Đen Vâu
                             </p>
                             <span class="text-sm text-gray-400">
                                 Artists
@@ -361,12 +254,12 @@
                     </div>
                     <div class="flex p-2 items-center">
                         <div class="w-6 h-6">
-                            <img src="https://source.unsplash.com/random
+                            <img src="./assets/avatar/chipu.jpg
                             " alt="" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div class="ml-2 flex-1">
                             <p class="text-sm font-semibold">
-                                Oliver Tree
+                                Chi Pu
                             </p>
                             <span class="text-sm text-gray-400">
                                 Artists
@@ -377,41 +270,52 @@
                 </div>
             </div>
             <!-- Play music -->
-            <div>
-                <div class="bg-[#b29dd7] w-full h-1 mt-5">
-                </div>
-                <div class="h-16 bg-[#f5f5f5] rounded-b-xl flex items-center justify-between">
-                    <div class="flex items-center">
-                        <div class="w-8 h-8 mr-3 ml-5">
-                            <img src="
-                                    https://source.unsplash.com/random
-                                    " alt="" class="w-full h-full object-cover rounded-lg">
+            <div class="relative max-w-7xl">
+                <div class="fixed left-0 right-0 bottom-0">
+                    <input type="range" class="range" step=".1">
+                    <div class="input-before"></div>
+                    <div class="grid grid-cols-5 h-16 bg-white">
+                        <div class="footer-info flex items-center">
+                            <!-- Render song info -->
                         </div>
-                        <div>
 
-                            <h3 class="text-xs md:text-sm font-semibold">Sleep 4Ever</h3>
-                            <p class="text-xs md:text-sm text-gray-400">Maggie andrew</p>
+                        <div class="flex items-center col-span-3 control-play justify-center">
+                            <div class="duration text-sm text-gray-400">
+                                03:00
+                            </div>
+                            <div class="flex play-item items-center">
+                                <i title="Shuffle"
+                                    class="text-gray-400 text-lg p-3 fa-solid fa-shuffle shuffle-song"></i>
+                                <i title="Back"
+                                    class="text-gray-400 text-lg p-3 fa-solid fa-backward-step prev-song"></i>
+                                <i title="Play"
+                                    class="text-gray-400 text-lg p-3 fa-regular fa-circle-play play-song"></i>
+                                <i title="Forward"
+                                    class="text-gray-400 text-lg p-3 fa-solid fa-forward-step next-song"></i>
+                                <i title="Repeat" class="text-gray-400 text-lg p-3 fa-solid fa-repeat repeat-song"></i>
+                            </div>
+                            <div class="remaining text-sm text-gray-400">
+                                00:08
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex">
-                        <i class="text-gray-400 text-lg p-3 fa-solid fa-shuffle"></i>
-                        <i class="text-gray-400 text-lg p-3 fa-solid fa-backward-step"></i>
-                        <i class="text-gray-400 text-lg p-3 fa-regular fa-circle-pause"></i>
-                        <i class="text-gray-400 text-lg p-3 fa-solid fa-forward-step"></i>
-                        <i class="text-gray-400 text-lg p-3 fa-solid fa-repeat"></i>
-                    </div>
-                    <div class="flex items-center mr-5 ">
-                        <i class="text-gray-400 text-lg p-3 fa-solid fa-volume-high"></i>
-                        <div class="bg-[#b29dd7] h-1 w-14">
+                        <div class="hidden lg:block">
+                            <div class="flex justify-end items-center mr-5 control-volume mt-2">
+                                <i class="text-gray-400 text-lg p-3 fa-solid fa-volume-high volume-icon"></i>
+                                <input type="range" value="100" class="range-volume" step=".1">
+                                <i class="text-[#b29dd7] fa-regular fa-heart p-4 "></i>
+                                <i class="text-[#b29dd7] fa-solid fa-ellipsis"></i>
+                            </div>
                         </div>
-                        <i class="text-[#b29dd7] fa-regular fa-heart p-4"></i>
-                        <i class="text-[#b29dd7] fa-solid fa-ellipsis"></i>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./main.js"></script>
+
 </body>
 
 </html>

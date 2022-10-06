@@ -1,0 +1,234 @@
+.slick-prev {
+    position: absolute;
+    top: 30%;
+    left: -15px;
+    color: #b29dd7;
+    z-index: 5;
+}
+
+.slick-next {
+    position: absolute;
+    top: 30%;
+    right: -15px;
+    color: #b29dd7;
+    z-index: 5;
+}
+
+.shuffle-song,
+.prev-song,
+.play-song,
+.next-song,
+.repeat-song {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 16px;
+
+}
+
+.shuffle-song:hover,
+.prev-song:hover,
+.play-song:hover,
+.next-song:hover,
+.repeat-song:hover {
+    color: #b29dd7;
+}
+
+
+.range {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 4px;
+    /* Specified height */
+    background: rgb(237, 236, 236);
+    /* Grey background */
+    outline: none;
+    /* opacity: 0.7; */
+    /* Remove outline */
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.range-volume {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    min-width: 100px;
+    max-width: 125px;
+    /* Full-width */
+    height: 3px;
+    /* Specified height */
+    background: rgb(222, 220, 220);
+    /* Grey background */
+    outline: none;
+    /* opacity: 0.7; */
+    /* Remove outline */
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    /* position: absolute; */
+    z-index: 1;
+}
+
+/* .range:hover {
+    opacity: 1;
+} */
+
+.input-before {
+    position: absolute;
+    height: 4px;
+    top: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.7;
+    z-index: 1;
+    background-color: #b29dd7;
+}
+
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 16px;
+    /* Set a specific slider handle width */
+    height: 16px;
+    /* Slider handle height */
+    background: #b29dd7;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+    border-radius: 100px;
+    border: 1px solid #b29dd7;
+    box-shadow: 0 0 4px 2px #8555d6;
+    transition: all 0.2 ease;
+}
+
+.range-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 10px;
+    /* Set a specific slider handle width */
+    height: 10px;
+    /* Slider handle height */
+    background: #b29dd7;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+    border-radius: 100px;
+    border: 1px solid #b29dd7;
+    box-shadow: 0 0 4px 2px #8555d6;
+    transition: all 0.2 ease;
+}
+
+.control-play {}
+
+.control-volume {
+    height: auto;
+}
+
+
+.volume-icon {
+    cursor: pointer;
+}
+
+.list-song {
+    cursor: pointer;
+}
+
+.song-img {
+
+    transition: 0.3s ease-in-out;
+}
+
+.song-img:hover {
+    transform: scale(1.1);
+}
+
+.song-img {
+    padding: 8px 0;
+}
+
+.duration-item {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.duration-text {
+    margin-top: 7px;
+
+}
+
+.list-overflow {
+    overflow-y: scroll
+}
+
+.avatar-item {
+    height: 24px;
+    margin-top: 24px;
+    margin-right: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scroll-custom::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+    /* Scrollbar */
+    background-color: #b29dd7;
+    border-radius: 100px;
+
+
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+    /* Background */
+    background-color: #9a78d4;
+    border-radius: 100px;
+}
+
+.playlist-item {
+    cursor: pointer;
+}
+
+
+.online {
+    width: 8px;
+    height: 8px;
+    background-color: greenyellow;
+    box-shadow: 0 0 1px 1px greenyellow;
+    border-radius: 10px;
+    margin-right: 6px;
+}
+
+.repeat-style,
+.shuffle-style {
+    color: #9169d6;
+}
+
+.duration {
+    position: fixed;
+    transform: translateX(-170px);
+}
+
+.remaining {
+    position: fixed;
+    transform: translateX(170px);
+}
+
+.back-ground {
+    background-image: linear-gradient(to bottom, #c4b7f0, white);
+}

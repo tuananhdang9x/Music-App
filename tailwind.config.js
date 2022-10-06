@@ -3,7 +3,12 @@ module.exports = {
   model: "jit",
   purge: ["./*.html"],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        250: '250px',
+
+      }
+    },
   },
   plugins: [],
 }
