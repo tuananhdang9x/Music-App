@@ -478,7 +478,8 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 4,
                     arrows: false,
-                    draggable: true
+                    draggable: true,
+                    slidesToScroll: 2
                 }
             },
             {
@@ -486,6 +487,7 @@ $(document).ready(function () {
                 settings: {
                     arrows: false,
                     slidesToShow: 3,
+                    slidesToScroll: 2,
                     draggable: true
                 }
             },
