@@ -79,6 +79,38 @@ const songs = [
         file: './assets/media/song10.mp3',
         singer: 'MCK',
         duration: '03:34'
+    },
+    {
+        id: 10,
+        name: '0 phải hôm nay',
+        img: './assets/img/img11.jpg',
+        file: './assets/media/song11.mp3',
+        singer: 'QNT',
+        duration: '02:54'
+    },
+    {
+        id: 11,
+        name: 'Just for me',
+        img: './assets/img/img12.jpg',
+        file: './assets/media/song12.mp3',
+        singer: 'Pinkpantheress',
+        duration: '01:49'
+    },
+    {
+        id: 12,
+        name: 'Replay trên con quây',
+        img: './assets/img/img13.jpg',
+        file: './assets/media/song13.mp3',
+        singer: 'Phúc Du',
+        duration: '03:41'
+    },
+    {
+        id: 13,
+        name: 'Head in the clounds',
+        img: './assets/img/img14.jpg',
+        file: './assets/media/song14.mp3',
+        singer: 'Hayd',
+        duration: '03:04'
     }
 ]
 let songIndex = 0;
@@ -138,7 +170,7 @@ function handleNext() {
     if (checkShuffle) {
         let newSongIndex;
         do {
-            newSongIndex = Math.floor(Math.random() * 10);
+            newSongIndex = Math.floor(Math.random() * 14);
         } while (newSongIndex === songIndex);
         songIndex = newSongIndex;
 
@@ -219,7 +251,7 @@ function handlePrev() {
     if (checkShuffle) {
         let newSongIndex;
         do {
-            newSongIndex = Math.floor(Math.random() * 10);
+            newSongIndex = Math.floor(Math.random() * 14);
         } while (newSongIndex === songIndex);
         songIndex = newSongIndex;
         mainDisk.innerHTML = `<img src="
@@ -361,7 +393,7 @@ function handleEnd() {
     if (checkShuffle) {
         let newSongIndex;
         do {
-            newSongIndex = Math.floor(Math.random() * 10);
+            newSongIndex = Math.floor(Math.random() * 14);
 
         } while (newSongIndex === songIndex);
         songIndex = newSongIndex;
@@ -418,17 +450,17 @@ function formatTimer(number) {
 }
 
 // Change duration
-inputRange.addEventListener('change', handleChangeBtn);
+inputRange.addEventListener("change", handleChangeBtn);
 function handleChangeBtn() {
     songItem.currentTime = inputRange.value
 }
-inputBefore.addEventListener('change', handleChangeBar);
+inputBefore.addEventListener("change", handleChangeBar);
 function handleChangeBar() {
     inputBefore.style.width = (songItem.currentTime / songItem.duration) * 100 + '%';
 }
 
 // Change volumn
-rangeVolume.addEventListener('change', handelChangeVolumn);
+rangeVolume.addEventListener('mousemove', handelChangeVolumn);
 function handelChangeVolumn() {
     songItem.volume = rangeVolume.value / 100;
     changeVolumnIcon(songItem.volume);
