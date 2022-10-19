@@ -497,7 +497,7 @@ function handleMute() {
 $(document).ready(function () {
     $('.img-slider').slick({
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         arrows: true,
         infinite: false,
         draggable: false,
