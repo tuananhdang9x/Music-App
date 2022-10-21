@@ -1,10 +1,5 @@
 // const $ = document.querySelector.bind(document);
 // const $$ = document.querySelectorAll.bind(document);
-/**
- * B1: render danh sách bài hát lên giao diện
- * 
- */
-
 
 const songs = [
     {
@@ -146,12 +141,16 @@ renderTimer();
 // Play and pause
 playSong.addEventListener('click', playPause);
 let timer = setInterval(renderTimer, 500);
+let inputBar = setInterval(renderInputBar, 10);
+
+
 let isPlaying = true;
 function playPause() {
     if (isPlaying) {
         songItem.play();
         diskAnimate.play();
-        playSong.setAttribute('class', 'text-gray-400 text-lg fa-regular fa-circle-pause p-3 play-song');
+        playSong.classList.remove('fa-circle-play')
+        playSong.classList.add('fa-circle-pause')
         isPlaying = false;
         clearInterval(timer);
         timer = setInterval(renderTimer, 500);
@@ -159,26 +158,24 @@ function playPause() {
         songItem.pause();
         diskAnimate.pause();
         isPlaying = true;
-        playSong.setAttribute('class', 'text-gray-400 text-lg fa-regular fa-circle-play p-3 play-song');
+        playSong.classList.remove('fa-circle-pause')
+        playSong.classList.add('fa-circle-play')
         clearInterval(timer);
     }
 }
 
-// Next and prev music
-nextSong.addEventListener('click', handleNext);
-function handleNext() {
-    if (checkShuffle) {
-        let newSongIndex;
-        do {
-            newSongIndex = Math.floor(Math.random() * 14);
-        } while (newSongIndex === songIndex);
-        songIndex = newSongIndex;
+function doShuffer() {
+    let newSongIndex;
+    do {
+        newSongIndex = Math.floor(Math.random() * 14);
+    } while (newSongIndex === songIndex);
+    songIndex = newSongIndex;
 
-        mainDisk.innerHTML = `<img src="
+    mainDisk.innerHTML = `<img src="
         ${songs[songIndex].img}
         " alt="" class="w-full h-full object-cover rounded-full">`
 
-        footerInfo.innerHTML = `
+    footerInfo.innerHTML = `
         <div class="hidden lg:block">
         <div class="flex items-center min-w-[200px]">
             <div class="w-8 h-8 mr-3 ml-5">
@@ -193,9 +190,16 @@ function handleNext() {
         </div>
         </div>
         `
-        currentSong = songItem.setAttribute('src', `${songs[songIndex].file}`)
-        isPlaying = true;
-        playPause();
+    currentSong = songItem.setAttribute('src', `${songs[songIndex].file}`)
+    isPlaying = true;
+    playPause();
+}
+
+// Next and prev music
+nextSong.addEventListener('click', handleNext);
+function handleNext() {
+    if (checkShuffle) {
+        doShuffer();
     } else if (songIndex >= songs.length - 1) {
         songIndex = 0;
         mainDisk.innerHTML = `<img src="
@@ -249,32 +253,7 @@ function handleNext() {
 prevSong.addEventListener('click', handlePrev);
 function handlePrev() {
     if (checkShuffle) {
-        let newSongIndex;
-        do {
-            newSongIndex = Math.floor(Math.random() * 14);
-        } while (newSongIndex === songIndex);
-        songIndex = newSongIndex;
-        mainDisk.innerHTML = `<img src="
-        ${songs[songIndex].img}
-        " alt="" class="w-full h-full object-cover rounded-full">`
-        footerInfo.innerHTML = `
-        <div class="hidden lg:block">
-        <div class="flex items-center min-w-[200px]">
-            <div class="w-8 h-8 mr-3 ml-5">
-                <img src="
-                        ${songs[songIndex].img}
-                        " alt="" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div>
-                <h3 class="text-xs md:text-sm font-semibold">${songs[songIndex].name}</h3>
-                <p class="text-xs md:text-sm text-gray-400">${songs[songIndex].singer}</p>
-            </div>
-        </div>
-        </div>
-        `
-        currentSong = songItem.setAttribute('src', `${songs[songIndex].file}`)
-        isPlaying = true;
-        playPause();
+        doShuffer();
     } else if (songIndex <= 0) {
         songIndex = songs.length - 1;
         mainDisk.innerHTML = `<img src="
@@ -334,12 +313,12 @@ function handleRepeat() {
         isRepeat = false;
         localStorage.setItem('isRepeat', JSON.stringify(isRepeat));
         checkRepeat = JSON.parse(localStorage.getItem('isRepeat'));
-        repeatSong.setAttribute('class', 'text-gray-400 text-lg p-3 fa-solid fa-repeat repeat-song')
+        repeatSong.className = "text-gray-400 text-lg p-3 fa-solid fa-repeat repeat-song";
     } else {
         isRepeat = true;
         localStorage.setItem('isRepeat', JSON.stringify(isRepeat));
         checkRepeat = JSON.parse(localStorage.getItem('isRepeat'));
-        repeatSong.setAttribute('class', 'repeat-style text-lg p-3 fa-solid fa-repeat repeat-song')
+        repeatSong.className = "repeat-style text-lg p-3 fa-solid fa-repeat repeat-song";
     }
 
 }
@@ -391,34 +370,7 @@ renderShuffle();
 songItem.addEventListener('ended', handleEnd);
 function handleEnd() {
     if (checkShuffle) {
-        let newSongIndex;
-        do {
-            newSongIndex = Math.floor(Math.random() * 14);
-
-        } while (newSongIndex === songIndex);
-        songIndex = newSongIndex;
-        mainDisk.innerHTML = `<img src="
-        ${songs[songIndex].img}
-        " alt="" class="w-full h-full object-cover rounded-full">`
-        footerInfo.innerHTML = `
-        <div class="hidden lg:block">
-        <div class="flex items-center min-w-[200px]">
-            <div class="w-8 h-8 mr-3 ml-5">
-                <img src="
-                        ${songs[songIndex].img}
-                        " alt="" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div>
-                <h3 class="text-xs md:text-sm font-semibold">${songs[songIndex].name}</h3>
-                <p class="text-xs md:text-sm text-gray-400">${songs[songIndex].singer}</p>
-            </div>
-        </div>
-        </div>
-        `
-        currentSong = songItem.setAttribute('src', `${songs[songIndex].file}`);
-        console.log(newSongIndex, songIndex);
-        isPlaying = true;
-        playPause();
+        doShuffer();
     } else if (checkRepeat) {
         isPlaying = true;
         playPause();
@@ -427,11 +379,14 @@ function handleEnd() {
     }
 
 }
-// Input duration and remaining time
-function renderTimer() {
-    inputBefore.style.width = (songItem.currentTime / songItem.duration) * 100 + '%';
+function renderInputBar() {
+    inputRange.min = 0;
     inputRange.max = songItem.duration;
     inputRange.value = songItem.currentTime;
+    inputBefore.style.width = (songItem.currentTime / songItem.duration) * 100 + '%';
+}
+// Input duration and remaining time
+function renderTimer() {
     if (!songItem.duration) {
         durationTime.innerText = '00:00';
         remainingTime.innerText = '00:00';
@@ -441,6 +396,15 @@ function renderTimer() {
     }
 }
 
+// FIX input range
+songItem.ontimeupdate = function () {
+    inputRange.value = songItem.currentTime;
+}
+handleInputBar = function () {
+    songItem.currentTime = inputRange.value;
+}
+
+////////
 function formatTimer(number) {
     const minus = Math.floor(number / 60);
     const second = Math.floor(number - minus * 60);
@@ -617,7 +581,7 @@ diskAnimate.pause();
 
 const listSongs = songs.map(function (value, index) {
     return `
-    <div class="playlist-item flex items-center pl-12" index="${index}">
+    <div class="playlist-item flex items-center pl-6" index="${index}">
         <p class="text-sm text-[#b29dd7] p-[10px]">${index + 1}</p>
         <i class="text-[#b29dd7] fa-regular fa-heart p-[6px]"></i>
         <div class="p-2 mr-12 flex-1">
